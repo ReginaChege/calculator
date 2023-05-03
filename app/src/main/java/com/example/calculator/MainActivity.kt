@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         tilsecond = findViewById(R.id.tilbtn2)
         tiloutput = findViewById(R.id.tiloutput)
         addNumbers()
+        subNumbers()
+        multiplyNumbers()
+        divideNumbers()
     }
 
     fun addNumbers() {
@@ -38,12 +41,12 @@ class MainActivity : AppCompatActivity() {
 
     fun subNumbers() {
         var first = findViewById<TextView>(R.id.tilfirst)
-//        var second=findViewById<TextView>(R.id.til)
-        var button = findViewById<Button>(R.id.tilbtn2)
+        var second=findViewById<TextView>(R.id.tilseconnd)
+        var button = findViewById<Button>(R.id.tilbtn4)
         button.setOnClickListener {
-            var subfirst = first.text.toString().toInt()
-            var subsecond = tilsecond.text.toString().toInt()
-            var output = subfirst - subsecond
+            var sub = first.text.toString().toInt()
+            var sub2 = second.text.toString().toInt()
+            var output = sub - sub2
             Toast.makeText(this, "$output", Toast.LENGTH_SHORT).show()
         }
     }
@@ -51,22 +54,22 @@ class MainActivity : AppCompatActivity() {
     fun multiplyNumbers() {
         var first = findViewById<TextView>(R.id.tilfirst)
         var second = findViewById<TextView>(R.id.tilseconnd)
-        var button = findViewById<Button>(R.id.tilbtn3)
+        var button = findViewById<Button>(R.id.tilbtn2)
         button.setOnClickListener {
-            var multifirst = first.text.toString().toInt()
-            var multisecond = second.text.toString().toInt()
-            var output = multifirst * multisecond
+            var multi = first.text.toString().toInt()
+            var multi2 = second.text.toString().toInt()
+            var output = multi * multi2
             Toast.makeText(this, "$output", Toast.LENGTH_SHORT).show()
         }
     }
         fun divideNumbers() {
             var first = findViewById<TextView>(R.id.tilfirst)
             var second = findViewById<TextView>(R.id.tilseconnd)
-            var button = findViewById<Button>(R.id.tilbtn4)
+            var button = findViewById<Button>(R.id.tilbtn3)
             button.setOnClickListener {
-                var first = first.text.toString().toInt()
-                var second = second.text.toString().toInt()
-                var output = first / second
+                var divide = first.text.toString().toInt()
+                var divide2 = second.text.toString().toInt()
+                var output = divide % divide2
                 Toast.makeText(this, "$output", Toast.LENGTH_SHORT).show()
             }
         }
